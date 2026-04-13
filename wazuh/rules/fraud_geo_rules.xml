@@ -1,0 +1,19 @@
+<group name="fraud, geo,">
+  <rule id="3001" level="8">
+    <if_sid>1000</if_sid>
+    <field name="geo_distance_km">^[5-9][0-9][0-9]+$</field>
+    <description>High geographic distance from previous transaction (>500km).</description>
+  </rule>
+
+  <rule id="3002" level="10">
+    <if_sid>1000</if_sid>
+    <field name="implied_speed_kmh">^[8-9][0-9][0-9]+$|^1[0-9]{3,}$</field>
+    <description>Implied travel speed exceeds typical commercial aviation (>800 km/h).</description>
+  </rule>
+
+  <rule id="3003" level="12">
+    <if_sid>1000</if_sid>
+    <field name="impossible_travel_flag">^true$</field>
+    <description>Impossible Travel detected for this card.</description>
+  </rule>
+</group>

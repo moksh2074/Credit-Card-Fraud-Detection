@@ -1,0 +1,13 @@
+<group name="fraud, composite,">
+  <rule id="7001" level="14">
+    <if_sid>3003</if_sid>
+    <if_matched_sid>2003</if_matched_sid>
+    <description>CRITICAL COMPOSITE: Impossible travel WITH velocity burst.</description>
+  </rule>
+
+  <rule id="7002" level="15">
+    <if_sid>1002</if_sid>
+    <if_matched_sid>5001</if_matched_sid>
+    <description>CRITICAL COMPOSITE: ML Critical Risk on a New Device.</description>
+  </rule>
+</group>

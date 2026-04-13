@@ -1,0 +1,59 @@
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Virtual environments
+env/
+venv/
+backend/venv/
+.venv/
+
+# Logs
+*.log
+
+# -------------------------
+# ML / Models
+# -------------------------
+*.joblib
+*.pkl
+*.h5
+*.pt
+
+# -------------------------
+# Node / Frontend
+# -------------------------
+node_modules/
+frontend/node_modules/
+dist/
+build/
+.vite/
+
+# -------------------------
+# OS Files
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# IDE
+# -------------------------
+.vscode/
+.idea/
+
+# -------------------------
+# Docker
+# -------------------------
+*.tar
+
+# -------------------------
+# Misc
+# -------------------------
+coverage/
+.cache/
+tmp/

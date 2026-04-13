@@ -1,0 +1,13 @@
+<group name="fraud, amount,">
+  <rule id="4001" level="8">
+    <if_sid>1000</if_sid>
+    <field name="amount">^[5-9][0-9]{3,}$</field>
+    <description>High-value transaction flagged (Anomalous Amount).</description>
+  </rule>
+
+  <rule id="4002" level="10">
+    <if_sid>4001</if_sid>
+    <field name="amount">^[1-9][0-9]{4,}$</field>
+    <description>Critical premium value transaction flagged (>$10,000).</description>
+  </rule>
+</group>

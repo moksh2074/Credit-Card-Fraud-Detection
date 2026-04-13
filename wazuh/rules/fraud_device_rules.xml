@@ -1,0 +1,13 @@
+<group name="fraud, device,">
+  <rule id="5001" level="5">
+    <if_sid>1000</if_sid>
+    <field name="is_new_device">^true$</field>
+    <description>Transaction originating from a new device.</description>
+  </rule>
+
+  <rule id="5002" level="10">
+    <if_sid>5001</if_sid>
+    <field name="amount">^[1-9][0-9]{3,}$</field>
+    <description>High value transaction from a new device.</description>
+  </rule>
+</group>

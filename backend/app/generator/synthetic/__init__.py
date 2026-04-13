@@ -1,0 +1,1 @@
+# Synthetic generator package

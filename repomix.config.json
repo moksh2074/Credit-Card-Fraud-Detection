@@ -1,0 +1,24 @@
+{
+  "include": [
+    "backend/app/**/*.py",
+    "backend/main.py",
+    "backend/requirements.txt",
+    "frontend/src/**/*",
+    "frontend/index.html",
+    "frontend/package.json",
+    "docs/**/*.md"
+  ],
+  "exclude": [
+    "node_modules",
+    "__pycache__",
+    ".git",
+    "*.db",
+    "*.joblib",
+    "*.log",
+    ".env"
+  ],
+  "output": {
+    "file": "repomix-output.txt",
+    "format": "markdown"
+  }
+}

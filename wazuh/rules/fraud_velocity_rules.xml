@@ -1,0 +1,19 @@
+<group name="fraud, velocity,">
+  <rule id="2001" level="8">
+    <if_sid>1000</if_sid>
+    <field name="velocity_1h">^[1-9][0-9]$</field>
+    <description>Elevated 1-hour transaction velocity.</description>
+  </rule>
+
+  <rule id="2002" level="10">
+    <if_sid>1000</if_sid>
+    <field name="velocity_24h">^[2-9][0-9]$</field>
+    <description>Elevated 24-hour transaction velocity.</description>
+  </rule>
+
+  <rule id="2003" level="12">
+    <if_sid>2001</if_sid>
+    <field name="velocity_1h">^[2-9][0-9]$</field>
+    <description>Critical 1-hour transaction velocity burst (>20 tx/hr).</description>
+  </rule>
+</group>

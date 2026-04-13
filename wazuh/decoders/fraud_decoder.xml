@@ -1,0 +1,9 @@
+<!-- Wazuh JSON Decoder for Fraud Platform -->
+<decoder name="fraud_decoder">
+  <prematch>^{"event_type": "fraud_score_result"</prematch>
+</decoder>
+
+<decoder name="fraud_decoder_child">
+  <parent>fraud_decoder</parent>
+  <plugin_decoder>JSON_Decoder</plugin_decoder>
+</decoder>
