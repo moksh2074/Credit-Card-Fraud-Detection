@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import LoginPage from './pages/LoginPage.jsx'
+import AuthCallbackPage from './pages/AuthCallbackPage.jsx'
 import DashboardPage from './pages/DashboardPage.jsx'
 import TransactionsPage from './pages/TransactionsPage.jsx'
 import AlertsPage from './pages/AlertsPage.jsx'
@@ -18,6 +19,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/auth/callback" element={<AuthCallbackPage />} />
       <Route
         path="/dashboard"
         element={
