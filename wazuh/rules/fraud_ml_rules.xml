@@ -1,0 +1,19 @@
+<group name="fraud, ml,">
+  <!-- Base rule -->
+  <rule id="1000" level="0">
+    <decoded_as>fraud_decoder_child</decoded_as>
+    <description>Fraud platform log base rule.</description>
+  </rule>
+
+  <rule id="1001" level="10">
+    <if_sid>1000</if_sid>
+    <field name="risk_level">^HIGH$</field>
+    <description>ML Model Risk: HIGH severity predicted.</description>
+  </rule>
+
+  <rule id="1002" level="12">
+    <if_sid>1000</if_sid>
+    <field name="risk_level">^CRITICAL$</field>
+    <description>ML Model Risk: CRITICAL severity predicted (Fraud Score > 0.85).</description>
+  </rule>
+</group>

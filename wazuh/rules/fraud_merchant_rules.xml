@@ -1,0 +1,13 @@
+<group name="fraud, merchant,">
+  <rule id="6001" level="8">
+    <if_sid>1000</if_sid>
+    <field name="mcc">^(5967|7995|6012|6051|4829)$</field>
+    <description>Transaction at High-Risk MCC.</description>
+  </rule>
+
+  <rule id="6002" level="12">
+    <if_sid>6001</if_sid>
+    <field name="amount">^[5-9][0-9]{2,}$|^[1-9][0-9]{3,}$</field>
+    <description>High volume transaction at High-Risk MCC.</description>
+  </rule>
+</group>
